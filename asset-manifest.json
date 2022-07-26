@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/beerList/static/css/main.5f426423.css",
-    "main.js": "/beerList/static/js/main.ba8dedad.js",
+    "main.css": "/beerList/static/css/main.373d26dd.css",
+    "main.js": "/beerList/static/js/main.ceac9d39.js",
     "static/media/logo-beer.png": "/beerList/static/media/logo-beer.eded0617fc8acab9ae86.png",
     "static/media/close.svg": "/beerList/static/media/close.67ec8381776a585eafdbb3e1b4139a5a.svg",
     "static/media/search_icon.svg": "/beerList/static/media/search_icon.cd761af2e6d53d07ac6129e7f885fa95.svg",
     "static/media/search_delete.svg": "/beerList/static/media/search_delete.6837248f26b4746bca22dce7c606b744.svg",
     "index.html": "/beerList/index.html",
-    "main.5f426423.css.map": "/beerList/static/css/main.5f426423.css.map",
-    "main.ba8dedad.js.map": "/beerList/static/js/main.ba8dedad.js.map"
+    "main.373d26dd.css.map": "/beerList/static/css/main.373d26dd.css.map",
+    "main.ceac9d39.js.map": "/beerList/static/js/main.ceac9d39.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f426423.css",
-    "static/js/main.ba8dedad.js"
+    "static/css/main.373d26dd.css",
+    "static/js/main.ceac9d39.js"
   ]
 }
