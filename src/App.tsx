@@ -8,8 +8,8 @@ import NotFound from './pages/NotFound';
 const App: React.FC = () => {
     return (
         <Routes>
-            <Route path={"/beerList"} element={<MainLayouts />}>
-                <Route path={"/"} element={<Home />} />
+            <Route path={"/"} element={<MainLayouts />}>
+                <Route path={""} element={<Home />} />
                 <Route path={"*"} element={<NotFound />}/>
             </Route>
         </Routes>
