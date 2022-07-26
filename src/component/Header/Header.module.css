@@ -1,0 +1,15 @@
+.wrap {
+  margin-bottom: 2em;
+  display: flex;
+}
+.wrap .logo {
+  width: 60px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.wrap .logo img {
+  width: 60px;
+}
+.wrap .logo:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=Header.module.css.map */

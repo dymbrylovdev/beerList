@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+.card {
+  background: white;
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 21px;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 1em;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.card__image img {
+  height: 100%;
+  left: 50%;
+  margin-top: 1em;
+  padding: 2em;
+}
+
+.card__abv {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.card_name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  line-height: 1.5em;
+  margin: 2em 0px 1em;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_name .name {
+  margin: 2em;
+}
+
+.card_description {
+  padding: 20px;
+  margin-bottom: 10px;
+  height: 130px;
+}/*# sourceMappingURL=BeerItem.module.css.map */

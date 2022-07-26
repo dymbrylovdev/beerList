@@ -1,0 +1,32 @@
+.wrap {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  margin-top: 2em;
+  padding: 0;
+}
+.wrap li {
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-right: 1em;
+  transition: all 0.3s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.wrap li span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+.wrap li:hover {
+  transform: scale(1.1);
+  background: #fff;
+  color: #907B7A;
+}
+.wrap .activ {
+  background: #fff;
+  color: #907B7A;
+}/*# sourceMappingURL=Pagination.module.css.map */

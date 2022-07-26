@@ -1,0 +1,67 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+$border-radius-size: 16px;
+
+.card {
+  background: white;
+  display: inline-block;
+  margin:0 auto;
+  border-radius: $border-radius-size + 5;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+}
+
+.card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom:1em;
+  border-top-left-radius: $border-radius-size;
+  border-top-right-radius: $border-radius-size;
+  img {
+    height: 100%;
+    left: 50%;
+    margin-top: 1em;
+    padding: 2em;
+  }
+}
+
+
+.card__abv {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+
+.card_name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  line-height: 1.5em;
+  margin: 2em 0px 1em;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .name {
+    margin: 2em;
+  }
+}
+
+.card_description {
+  padding: 20px;
+  margin-bottom: 10px;
+  height: 130px;
+}
+

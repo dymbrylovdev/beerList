@@ -1,0 +1,19 @@
+.wrap {
+    margin-bottom: 2em;
+    display: flex;
+    
+    & .logo {
+        width: 60px;
+        cursor: pointer;
+        transition: all .3s;
+        & img {
+            width: 60px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }    
+
+    & .search {}
+}

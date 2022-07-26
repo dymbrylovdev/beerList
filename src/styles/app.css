@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(to bottom, rgb(140, 122, 122) 0%, rgb(175, 135, 124) 65%, rgb(175, 135, 124) 100%) fixed;
+    background-size: cover;
+    font: 14px/20px "Lato", Arial, sans-serif;
+    color: #9E9E9E;
+    margin-top: 30px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+    padding: 0 2em;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4em;
+    grid-row-gap: 3em;
+}
+
+@media (max-width: 1400px) {
+    .wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 4em;
+        grid-row-gap: 3em;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrap {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 4em;
+        grid-row-gap: 3em;
+    }
+}

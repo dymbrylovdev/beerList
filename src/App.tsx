@@ -1,12 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/app.css';
+import { Routes, Route } from "react-router-dom";
+import MainLayouts from "./layouts/MainLayouts";
+import Home from "./pages/Home";
+import NotFound from './pages/NotFound';
 
-function App() {
-  return (
-    <div className="App">
-    </div>
-  )
+const App: React.FC = () => {
+    return (
+        <Routes>
+            <Route path={"/beerList"} element={<MainLayouts />}>
+                <Route path={"/"} element={<Home />} />
+                <Route path={"*"} element={<NotFound />}/>
+            </Route>
+        </Routes>
+    )
 }
 
 export default App;

@@ -1,13 +1,13 @@
 import React from 'react';
-import './Content.css';
-import {IBeer} from "../../types/beer";
+import {IBeer} from "../../redux/reducers/beer/types";
+import style from "./BeerItem.module.css";
 
 type ContentItemBeerProps = {
     beerValues: IBeer;
     onClick: (elem: IBeer) => void;
 }
 
-const BeerItem = ({beerValues, onClick}: ContentItemBeerProps) => {
+const BeerItem: React.FC<ContentItemBeerProps> = ({beerValues, onClick}) => {
 
     function stringValidation (str: string) : string {
         const len = str.split(" ").join("").length;
@@ -18,17 +18,17 @@ const BeerItem = ({beerValues, onClick}: ContentItemBeerProps) => {
     }
 
     return (
-            <div className="card" onClick={()=> onClick(beerValues)}>
-                <div className="card__image">
+            <div className={style.card} onClick={()=> onClick(beerValues)}>
+                <div className={style.card__image}>
                     <img src={beerValues.image_url} alt="barbarian"/>
                 </div>
-                <div className="card_name">
-                    <div className="name">
+                <div className={style.card_name}>
+                    <div className={style.name}>
                         {beerValues.name}
                     </div>
                 </div>
-                <div className="card__abv">{beerValues.abv} %</div>
-                <div className="card_description">
+                <div className={style.card__abv}>{beerValues.abv} %</div>
+                <div className={style.card_description}>
                     {stringValidation(beerValues.description)}
                 </div>
             </div>

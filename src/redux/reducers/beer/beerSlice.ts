@@ -1,11 +1,12 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {IBeer} from "../../types/beer";
-import axios from "axios";
+import {createSlice} from "@reduxjs/toolkit";
+import {getBeers} from "./AsyncActions/actionBeer";
+import {BeerState, Status} from "./types";
 
 
 const initialState: BeerState = {
     beers: [],
-    loading: false,
+    loading: true,
+    status: Status.LOADING,
 }
 
 export const cubeSlice = createSlice({
@@ -14,20 +15,29 @@ export const cubeSlice = createSlice({
     reducers: {
         addBeers: (state, action) => {
             state.beers = action.payload;
-        }
+        },
     },
     extraReducers: (builder) => {
-        builder.addCase(getBeersFromPage.pending, (state, action) => {
+        // life ciсle  getBeersFromPage
+        builder.addCase(getBeers.pending, (state, action) => {
             state.loading = true;
+            state.status = Status.LOADING;
         })
-        builder.addCase(getBeersFromPage.fulfilled, (state, action) => {
+        builder.addCase(getBeers.fulfilled, (state, action) => {
             state.loading = false;
+            state.status = Status.SUCCESS;
+            state.beers = action.payload;
+        })
+        builder.addCase(getBeers.rejected, (state, action) => {
+            state.loading = false;   
+            state.status = Status.ERROR;
+            
         })
     }
 })
 
 export const {
-    addBeers
+    addBeers,
 } = cubeSlice.actions;
 
 export default cubeSlice.reducer;

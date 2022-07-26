@@ -1,0 +1,16 @@
+.root {
+    margin: 0 auto;
+    text-align: center;
+    padding: 5em;
+    & h1 {
+        color: #fff;
+        font-size: 4em;
+    text-align: center;
+
+    }
+
+    & .description {
+        color: #fff;
+        font-size: 2em;
+    }
+}

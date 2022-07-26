@@ -1,18 +1,18 @@
 import React from 'react';
-import iconCLose from "../../../assets/img/close.svg";
-import "./Modal.scss";
-import {IBeer} from "../../../redux/reducers/beer/types";
+import iconCLose from "../../assets/img/close.svg";
+import "./Modal.css";
+import {IBeer} from "../../redux/reducers/beer/types";
 
 type ModalProps = {
     elem: IBeer | undefined;
-    onClick: (isVisible: boolean) => void;
+    setModalIsVisible: (isVisible: boolean) => void;
 }
 
-const Modal : React.FC<ModalProps> = ({elem, onClick}) => {
+const Modal : React.FC<ModalProps> = ({elem, setModalIsVisible}) => {
     return (
         <>
             <div className="modal">
-                <div className="close" onClick={() => onClick(false)}>
+                <div className="close" onClick={() => setModalIsVisible(false)}>
                     <img src={iconCLose} alt=""/>
                 </div>
                 <div className="modal_info">
@@ -44,7 +44,7 @@ const Modal : React.FC<ModalProps> = ({elem, onClick}) => {
                     </div>
                 </div>
             </div>
-            <div className="back_fon">
+            <div className="back_fon" onClick={() => setModalIsVisible(false)}>
             </div>
         </>
     );
